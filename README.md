@@ -25,11 +25,13 @@ Usage:
 	    pheromoneDepositAmount=5 
     )
     
+    //populate graph data:
     val rnd=new Random();
     val testSize=50
     val gRnd=Vector.tabulate[Double](testSize,testSize){(i,j) => if(i<j) rnd.nextDouble*100 else 0.0}
     val graph=ACO.Graph(testSize, gRnd)
     
-    
+    //Tadam:
+    val bestPath=ACO(graph,config)
     
     
